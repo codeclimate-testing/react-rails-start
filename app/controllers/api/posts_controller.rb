@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class PostsController < ApplicationController
     before_action :set_post, only: %i[show update destroy]
@@ -12,7 +14,7 @@ module Api
     def create
       @post = Post.new(post_params)
       @post.author = current_user
-      
+
       return render json: @post, status: :created if @post.save
 
       render json: { errors: { post: @post.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
@@ -20,7 +22,7 @@ module Api
 
     def update
       return render json: @post if @post.update(post_params)
-      
+
       render json: { errors: { post: @post.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class CommentsController < ApplicationController
     before_action :set_comment, only: %i[show update destroy]
@@ -5,6 +7,7 @@ module Api
 
     def index
       return render json: Comment.all unless params[:post_id].present?
+
       render json: Comment.where(post: @post, parent: nil)
     end
 
@@ -23,9 +26,9 @@ module Api
     end
 
     def update
-      return render json: { errors: 'Usuario incorrecto' }, status: :unauthorized if current_user != @comment.author 
+      return render json: { errors: 'Usuario incorrecto' }, status: :unauthorized if current_user != @comment.author
       return render json: @comment if @comment.update(comment_params)
-      
+
       render json: { errors: { comment: @comment.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
     end
 

@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 module Api
   class UserSessionsController < ApplicationController
     def create
-      puts "LOGIN"
+      puts 'LOGIN'
       puts "email: #{params[:email]}"
       puts "password: #{params[:password]}"
       @user = login(params[:email], params[:password])
 
       return render json: @user, status: :created if @user
+
       render json: { error: 'Login failed' }, status: :unprocessable_entity
     end
 
