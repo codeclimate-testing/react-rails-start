@@ -49,7 +49,7 @@ module Api
     private
 
     def user_errors
-      { 
+      {
         json: {
           errors: {
             user: @user.errors.to_hash(full_messages = true)
