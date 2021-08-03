@@ -67,11 +67,11 @@ module Api
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(%i[
-                                     email
-                                     name
-                                     last_name
-                                     password
-                                     password_confirmation
+                                       email
+                                       name
+                                       last_name
+                                       password
+                                       password_confirmation
                                      ])
     end
   end
