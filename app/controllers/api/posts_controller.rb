@@ -17,13 +17,13 @@ module Api
 
       return render json: @post, status: :created if @post.save
 
-      render json: { errors: { post: @post.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
+      render post_errors
     end
 
     def update
       return render json: @post if @post.update(post_params)
 
-      render json: { errors: { post: @post.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
+      render post_errors
     end
 
     def destroy
@@ -31,6 +31,17 @@ module Api
     end
 
     private
+
+    def post_errors
+      {
+        json: {
+          errors: {
+            post: @post.errors.to_hash(full_messages = true)
+          }
+        },
+        status: :unprocessable_entity
+      }
+    end
 
     def set_post
       @post = Post.find(params.require(:id))

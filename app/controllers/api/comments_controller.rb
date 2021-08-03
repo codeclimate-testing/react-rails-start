@@ -22,14 +22,14 @@ module Api
 
       return render json: @comment, status: :created if @comment.save
 
-      render json: { errors: { comment: @comment.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
+      render comment_errors
     end
 
     def update
-      return render json: { errors: 'Usuario incorrecto' }, status: :unauthorized if current_user != @comment.author
+      return render incorrect_user_error if current_user != @comment.author
       return render json: @comment if @comment.update(comment_params)
 
-      render json: { errors: { comment: @comment.errors.to_hash(full_messages = true) } }, status: :unprocessable_entity
+      render comment_errors
     end
 
     def destroy
@@ -37,6 +37,21 @@ module Api
     end
 
     private
+
+    def incorrect_user_error
+      { json: { errors: 'Usuario incorrecto' }, status: :unauthorized }
+    end
+
+    def comment_errors
+      {
+        json: {
+          errors: {
+            comment: @comment.errors.to_hash(full_messages = true)
+          }
+        },
+        status: :unprocessable_entity
+      }
+    end
 
     def set_comment
       @comment = Comment.find(params.require(:id))
