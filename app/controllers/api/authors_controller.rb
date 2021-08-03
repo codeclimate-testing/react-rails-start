@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class AuthorsController < ApplicationController
     before_action :set_author, only: %i[show update destroy]
@@ -11,7 +13,7 @@ module Api
 
     def create
       @author = Author.new(author_params[:author])
-      
+
       return render json: @author, status: :created if @author.save
 
       render json: { errors: @author.errors }, status: :unprocessable_entity
@@ -19,7 +21,7 @@ module Api
 
     def update
       return render json: @author if @author.update(author_params[:author])
-      
+
       render json: { errors: @author.errors }, status: :unprocessable_entity
     end
 
