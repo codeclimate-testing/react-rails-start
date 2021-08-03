@@ -27,8 +27,7 @@ module Api
       if @user.save
         render json: @user, status: :created
       else
-        render json: { errors: { user: @user.errors.to_hash(full_messages = true) } },
-               status: :unprocessable_entity
+        render user_errors
       end
     end
 
@@ -37,8 +36,7 @@ module Api
       if @user.update(user_params)
         render json: @user, status: :ok
       else
-        render json: { errors: { user: @user.errors.to_hash(full_messages = true) } },
-               status: :unprocessable_entity
+        render user_errors
       end
     end
 
@@ -50,6 +48,17 @@ module Api
 
     private
 
+    def user_errors
+      { 
+        json: {
+          errors: {
+            user: @user.errors.to_hash(full_messages = true)
+          }
+        },
+        status: :unprocessable_entity
+      }
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -57,7 +66,11 @@ module Api
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :name, :last_name, :password, :password_confirmation)
+      params.require(:user).permit(%i[
+        email name
+        last_name password
+        password_confirmation
+      ])
     end
   end
 end
