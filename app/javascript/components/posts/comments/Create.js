@@ -1,19 +1,19 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Card from "../../card/Card"
-import CardBody from "../../card/CardBody"
-import CardTitle from "../../card/CardTitle"
-import Title from "../../typography/Title"
-import Subtitle from "../../typography/Subtitle"
-import Input from "../../form/Input"
-import Button from "../../Button"
-import useSWR, { mutate } from "swr"
-import useToken from "../../../utils/useToken"
-import { useForm } from "react-hook-form"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Card from '../../card/Card'
+import CardBody from '../../card/CardBody'
+import CardTitle from '../../card/CardTitle'
+import Title from '../../typography/Title'
+import Subtitle from '../../typography/Subtitle'
+import Input from '../../form/Input'
+import Button from '../../Button'
+import useSWR, { mutate } from 'swr'
+import useToken from '../../../utils/useToken'
+import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
-import Form from "../../form/Form"
+import Form from '../../form/Form'
 
-/*const Create = (props) => {
+/* const Create = (props) => {
   const { postId, commentId } = props
   const defaultValues = {
     parent_id: commentId,
@@ -46,7 +46,7 @@ import Form from "../../form/Form"
         }
       }).finally(() => reset(defaultValues));
   }
-  
+
   return (
           <Card>
             <CardBody>
@@ -66,7 +66,7 @@ import Form from "../../form/Form"
             </CardBody>
           </Card>
          )
-}*/
+} */
 const Create = (props) => {
   const { postId, commentId, onSuccess } = props
   const defaultValues = {
@@ -81,7 +81,7 @@ const Create = (props) => {
     console.log('Comentado!!')
     onSuccess && onSuccess()
   }
-  
+
   return (
     <Card>
       <CardBody>

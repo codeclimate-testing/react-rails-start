@@ -1,11 +1,11 @@
-import React from "react"
-import { useForm } from "react-hook-form"
-import useToken from "../../utils/useToken"
-import Input from "../form/Input"
-import Button from "../Button"
-import { useHistory } from "react-router-dom"
-import { mutate } from "swr"
-import Form from "../form/Form"
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import useToken from '../../utils/useToken'
+import Input from '../form/Input'
+import Button from '../Button'
+import { useHistory } from 'react-router-dom'
+import { mutate } from 'swr'
+import Form from '../form/Form'
 
 /*
 const Login = () => {
@@ -62,7 +62,7 @@ const defaultValues = {
 const Login = () => {
   return (
     <div>
-      <Form defaultValues={defaultValues} action={{url: '/api/login', buttonLabel: 'Ingresar', mutateUrl: '/api/session'}}>
+      <Form defaultValues={defaultValues} action={{ url: '/api/login', buttonLabel: 'Ingresar', mutateUrl: '/api/session' }}>
         <Input fullWidth name="email" label="Email" required />
         <Input fullWidth name="password" label="Contraseña" required type="password" />
       </Form>

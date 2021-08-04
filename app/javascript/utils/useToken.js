@@ -1,7 +1,7 @@
-import React from "react"
-import readCookie from "./readCookie"
+import React from 'react'
+import readCookie from './readCookie'
 
-/*const useToken = () => {
+/* const useToken = () => {
   const [token, setToken] = React.useState(null)
 
   React.useEffect(() => {
@@ -10,7 +10,7 @@ import readCookie from "./readCookie"
   }, [])
 
   return token
-}*/
+} */
 
 const useToken = () => {
   const [token, setToken] = React.useState(null)

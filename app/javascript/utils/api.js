@@ -1,7 +1,7 @@
 import useSWR, { useSWRInfinite, mutate } from 'swr'
 
 export function useUser () {
-  const { data, error } = useSWR(`/api/session`)
+  const { data, error } = useSWR('/api/session')
   return {
     data: data,
     loading: !error && !data,
@@ -19,7 +19,7 @@ export const apiLogin = async (requestData, token) => {
     body: JSON.stringify(requestData)
   })
   const data = await response.json()
-  if(!data.error) {
+  if (!data.error) {
     mutate('/api/session')
   }
   return data
@@ -35,14 +35,14 @@ const getKey = (path) => {
   return func
 }
 
-export function usePosts() {
+export function usePosts () {
   const { data, error, size, setSize, isValidating } = useSWRInfinite(getKey('/api/posts'))
-  const posts = data ? [].concat(...data) : [];
-  const isLoadingInitialData = !data && !error;
-  const isLoadingMore = isLoadingInitialData || (size > 0 && data && typeof data[size - 1] === "undefined");
-  const isEmpty = data?.[0]?.length === 0;
-  const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < PAGE_SIZE);
-  const isRefreshing = isValidating && data && data.length === size;
+  const posts = data ? [].concat(...data) : []
+  const isLoadingInitialData = !data && !error
+  const isLoadingMore = isLoadingInitialData || (size > 0 && data && typeof data[size - 1] === 'undefined')
+  const isEmpty = data?.[0]?.length === 0
+  const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < PAGE_SIZE)
+  const isRefreshing = isValidating && data && data.length === size
 
   return { posts, error, isLoadingMore, size, setSize, isReachingEnd, isRefreshing }
 }

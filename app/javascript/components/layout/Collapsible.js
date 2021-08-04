@@ -1,7 +1,7 @@
-import React from "react"
-import Button from "../Button"
-import Card from "../card/Card"
-import CardTitle from "../card/CardTitle"
+import React from 'react'
+import Button from '../Button'
+import Card from '../card/Card'
+import CardTitle from '../card/CardTitle'
 
 const Collapsible = (props) => {
   const { open, toggleOpen, title, children } = props
@@ -10,7 +10,8 @@ const Collapsible = (props) => {
     toggleOpen(false)
   }
 
-  return open ? (
+  return open
+    ? (
     <Card>
     { toggleOpen !== undefined && (<CardTitle>
       <div>{title && <Title>{title}</Title>}</div>
@@ -20,7 +21,8 @@ const Collapsible = (props) => {
     </CardTitle>)}
       {children}
     </Card>
-  ) : null
+      )
+    : null
 }
 
 export default Collapsible

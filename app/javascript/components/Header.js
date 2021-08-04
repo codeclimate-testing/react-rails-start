@@ -1,23 +1,23 @@
-import React from "react"
-import PropTypes from "prop-types"
-import PostsPage from "./posts/Index"
-import PostPage from "./posts/Show"
-import HomePage from "./Home"
-import LoginPage from "./user/Login"
-import LogoutPage from "./user/Logout"
-import SignupPage from "./user/Signup"
-import { useUser } from "../utils/api"
+import React from 'react'
+import PropTypes from 'prop-types'
+import PostsPage from './posts/Index'
+import PostPage from './posts/Show'
+import HomePage from './Home'
+import LoginPage from './user/Login'
+import LogoutPage from './user/Logout'
+import SignupPage from './user/Signup'
+import { useUser } from '../utils/api'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
   Link
-} from "react-router-dom"
-import NavButton from "./button/NavButton"
+} from 'react-router-dom'
+import NavButton from './button/NavButton'
 
 const headerLinks = [
-  { name: 'Home', path: '/'},
+  { name: 'Home', path: '/' },
   { name: 'Posts', path: '/posts' }
 ]
 
@@ -26,7 +26,7 @@ const UserContext = React.createContext({ user: null, loading: true, error: null
 const Header = () => {
   const { data: currentUser, loading, error } = useUser()
   return (
-    <UserContext.Provider value={{user: currentUser, loading: loading, error: error}}>
+    <UserContext.Provider value={{ user: currentUser, loading: loading, error: error }}>
       <Router>
         <nav className="flex content-center items-center justify-between bg-green-700 text-white p-3">
           <div className="mx-3">Logo</div>
@@ -42,19 +42,21 @@ const Header = () => {
           </div>
           <div className="mx-3">
             <div className="flex items-center">
-              {currentUser ? (
+              {currentUser
+                ? (
                 <>
                   <span className="mx-3">{currentUser.email}</span>
                   <div className="mx-3">
                     <NavButton href="/logout">Logout</NavButton>
                   </div>
                 </>
-              ) : (
+                  )
+                : (
                 <>
                   <NavButton href="/login">Login</NavButton>
                   <NavButton href="/signup">Registrarse</NavButton>
                 </>
-              )}
+                  )}
             </div>
           </div>
         </nav>
@@ -74,7 +76,7 @@ const Header = () => {
         </Switch>
       </Router>
     </UserContext.Provider>
-  );
+  )
 }
 
 export default Header
