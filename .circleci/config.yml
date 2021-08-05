@@ -27,6 +27,9 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - run:
+          name: Setup database
+          command: docker-compose up
+      - run:
           name: Run tests
           command: |
             ./cc-test-reporter before-build
