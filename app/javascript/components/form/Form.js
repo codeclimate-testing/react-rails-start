@@ -1,16 +1,16 @@
-import React from "react"
-import { useForm, FormProvider } from "react-hook-form"
-import Button from "../Button"
-import useToken from "../../utils/useToken"
-import useSWR, { mutate } from "swr"
-import { objectFlatten, setApiErrors } from "../../utils/formUtils"
-import _ from "lodash"
+import React from 'react'
+import { useForm, FormProvider } from 'react-hook-form'
+import Button from '../Button'
+import useToken from '../../utils/useToken'
+import useSWR, { mutate } from 'swr'
+import { objectFlatten, setApiErrors } from '../../utils/formUtils'
+import _ from 'lodash'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const Form = (props) => {
   const { children, defaultValues, onSuccess, action: { url, buttonLabel, mutateUrl = url } } = props
-  const formHook = useForm({criteriaMode: 'all', defaultValues})
+  const formHook = useForm({ criteriaMode: 'all', defaultValues })
   const { handleSubmit, reset, setError, formState, getValues } = formHook
   const token = useToken()
 
@@ -25,7 +25,7 @@ const Form = (props) => {
     })
     const data = await response.json()
     mutate(mutateUrl)
-    if(data.errors) {
+    if (data.errors) {
       setApiErrors(data.errors, setError)
     }
   }
@@ -36,7 +36,7 @@ const Form = (props) => {
       console.log(defaultValues)
       reset(defaultValues)
     }
-  }, [formState, reset]);
+  }, [formState, reset])
 
   return (
     <FormProvider {...formHook}>
@@ -44,11 +44,13 @@ const Form = (props) => {
         <fieldset disabled={formState.isSubmitting}>
           {children}
         </fieldset>
-        {formState.isSubmitting ? (
+        {formState.isSubmitting
+          ? (
           <div>Cargando...</div>
-        ) : (
+            )
+          : (
           <Button type="submit" color="green-700">{buttonLabel}</Button>
-        )}
+            )}
       </form>
     </FormProvider>
   )

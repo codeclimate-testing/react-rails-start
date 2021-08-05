@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Card from "../card/Card"
-import CardTitle from "../card/CardTitle"
-import Title from "../typography/Title"
-import Subtitle from "../typography/Subtitle"
-import SmallText from "../typography/SmallText"
-import { Link } from "react-router-dom"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Card from '../card/Card'
+import CardTitle from '../card/CardTitle'
+import Title from '../typography/Title'
+import Subtitle from '../typography/Subtitle'
+import SmallText from '../typography/SmallText'
+import { Link } from 'react-router-dom'
 
 class BlogPostItem extends React.Component {
   render () {
@@ -23,7 +23,7 @@ class BlogPostItem extends React.Component {
           </div>
         </CardTitle>
       </Card>
-    );
+    )
   }
 }
 
@@ -32,6 +32,6 @@ BlogPostItem.propTypes = {
   title: PropTypes.string,
   createdAt: PropTypes.node,
   author: PropTypes.string
-};
+}
 
 export default BlogPostItem

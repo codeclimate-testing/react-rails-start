@@ -1,17 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Card from "../../card/Card"
-import CardTitle from "../../card/CardTitle"
-import Title from "../../typography/Title"
-import Subtitle from "../../typography/Subtitle"
-import SmallTitle from "../../typography/SmallTitle"
-import SmallText from "../../typography/SmallText"
-import { Link } from "react-router-dom"
-import CardBody from "../../card/CardBody"
-import Button from "../../Button"
-import Create from "./Create"
-import Collapsible from "../../layout/Collapsible"
-import { IoChatbubblesOutline } from "react-icons/io5"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Card from '../../card/Card'
+import CardTitle from '../../card/CardTitle'
+import Title from '../../typography/Title'
+import Subtitle from '../../typography/Subtitle'
+import SmallTitle from '../../typography/SmallTitle'
+import SmallText from '../../typography/SmallText'
+import { Link } from 'react-router-dom'
+import CardBody from '../../card/CardBody'
+import Button from '../../Button'
+import Create from './Create'
+import Collapsible from '../../layout/Collapsible'
+import { IoChatbubblesOutline } from 'react-icons/io5'
 
 const CommentItem = (props) => {
   const { body, author, createdAt, replies, commentId, postId } = props
@@ -50,7 +50,7 @@ const CommentItem = (props) => {
         )
       }))}
     </Card>
-  );
+  )
 }
 
 CommentItem.propTypes = {
@@ -60,6 +60,6 @@ CommentItem.propTypes = {
   author: PropTypes.string,
   body: PropTypes.string,
   replies: PropTypes.arrayOf(PropTypes.object)
-};
+}
 
 export default CommentItem

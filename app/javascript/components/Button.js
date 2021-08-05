@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import classNames from "classnames"
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Button = (props) => {
   const {
@@ -17,28 +17,28 @@ const Button = (props) => {
     ...rest
   } = props
 
-  var classes = className + " transition-all duration-300 rounded-lg"
+  let classes = className + ' transition-all duration-300 rounded-lg'
   classes += ` bg-${color || 'green-700'}`
   classes += ` text-${textColor || 'white'}`
-  if(!noPadding) classes += ' p-3'
+  if (!noPadding) classes += ' p-3'
 
   const textClasses = classNames({
     'ml-3': icon
   })
 
-  let button = <button type={type} className={classes} {...rest}>
+  const button = <button type={type} className={classes} {...rest}>
     <div className="flex items-center">
       {icon && <div className="rounded-full p-2">
         {icon}
       </div>}
       {(text || children) &&
       <div className={textClasses}>
-        {text ? text : children}
+        {text || children}
       </div>}
     </div>
   </button>
-  
-  if(href) return <a href={href}>{button}</a>
+
+  if (href) return <a href={href}>{button}</a>
   return button
 }
 
@@ -50,9 +50,9 @@ Button.propTypes = {
   href: PropTypes.string,
   text: PropTypes.string,
   style: PropTypes.oneOf([
-    "solid",
-    "ghost"
+    'solid',
+    'ghost'
   ])
-};
+}
 
 export default Button

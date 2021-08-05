@@ -1,18 +1,18 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Card from "../card/Card"
-import CardBody from "../card/CardBody"
-import CardTitle from "../card/CardTitle"
-import Title from "../typography/Title"
-import Subtitle from "../typography/Subtitle"
-import Input from "../form/Input"
-import Button from "../Button"
-import useSWR, { mutate } from "swr"
-import useToken from "../../utils/useToken"
-import { useForm } from "react-hook-form"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Card from '../card/Card'
+import CardBody from '../card/CardBody'
+import CardTitle from '../card/CardTitle'
+import Title from '../typography/Title'
+import Subtitle from '../typography/Subtitle'
+import Input from '../form/Input'
+import Button from '../Button'
+import useSWR, { mutate } from 'swr'
+import useToken from '../../utils/useToken'
+import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
-import { IoClose } from "react-icons/io5"
-import Form from "../form/Form"
+import { IoClose } from 'react-icons/io5'
+import Form from '../form/Form'
 
 const defaultValues = {
   post: {
@@ -27,8 +27,9 @@ const Create = (props) => {
   const toggleForm = (e) => {
     setOpen(!open)
   }
-  
-  return open ? (
+
+  return open
+    ? (
           <Card>
             <CardTitle>
               <div>
@@ -40,20 +41,21 @@ const Create = (props) => {
             </CardTitle>
             <CardBody>
             <div className="w-full">
-              <Form onSuccess={toggleForm} defaultValues={defaultValues} action={{url: '/api/posts', buttonLabel: 'Publicar'}}>
+              <Form onSuccess={toggleForm} defaultValues={defaultValues} action={{ url: '/api/posts', buttonLabel: 'Publicar' }}>
                 <Input fullWidth required name="post[title]" label="Título" />
-                <Input rules={{required: false}} fullWidth name="post[body]" type="textarea" label="Contenido"/>
+                <Input rules={{ required: false }} fullWidth name="post[body]" type="textarea" label="Contenido"/>
               </Form>
             </div>
             </CardBody>
           </Card>
-        ) : (
+      )
+    : (
           <Card>
             <CardBody>
               <div onClick={toggleForm}>Agregar post</div>
             </CardBody>
           </Card>
-        )
+      )
 }
 
 export default Create
