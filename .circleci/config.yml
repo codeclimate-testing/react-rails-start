@@ -6,6 +6,16 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:2.7.1-node
+        environment:
+          RAILS_ENV: test
+          CC_TEST_REPORTER_ID: e698bbf80bf3c4d5cbc9689b595376ac4ba846dee43cb39aefc1ae03561815dc
+          PGHOST: 127.0.0.1
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/wbooks-api_test
+      - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: react_rails_start_test
+          POSTGRES_PASSWORD: postgres
     executor: ruby/default
     steps:
       - checkout
@@ -19,3 +29,19 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:schema:load --trace
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            ./cc-test-reporter before-build
+            bundle exec rspec spec -fd
+            ./cc-test-reporter after-build
