@@ -28,7 +28,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - run:
           name: Setup database
-          command: docker-compose up
+          command: sudo docker-compose up
       - run:
           name: Run tests
           command: |
