@@ -4,6 +4,8 @@ orbs:
 
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: e698bbf80bf3c4d5cbc9689b595376ac4ba846dee43cb39aefc1ae03561815dc
     docker:
       - image: cimg/ruby:2.7.1-node
     executor: ruby/default
@@ -19,3 +21,14 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            ./cc-test-reporter before-build
+            bundle exec rspec spec -fd
+            ./cc-test-reporter after-build
