@@ -10,7 +10,7 @@ jobs:
           RAILS_ENV: test
           CC_TEST_REPORTER_ID: e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9
           PGHOST: 127.0.0.1
-          DATABASE_URL: postgres://postgres@127.0.0.1:5432/wbooks-api_test
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/react_rails_start_test
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: postgres
