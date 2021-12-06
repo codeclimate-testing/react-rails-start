@@ -14,6 +14,10 @@ class Post < ApplicationRecord
   validates :body, length: { maximum: 140 }
 
   def do_a_flip
-    puts 'flipped!'
+    puts 'flipped!!!!!'
+  end
+  
+  def say_hello
+    puts 'hello'
   end
 end
