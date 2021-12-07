@@ -21,6 +21,10 @@ class Post < ApplicationRecord
     puts 'hello'
   end
 
+  def cool_title
+    "Cool #{title}"
+  end
+
   def say_goodbye
     puts 'bye'
   end
