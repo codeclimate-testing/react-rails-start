@@ -49,6 +49,8 @@ plugins:
   rubocop:
     enabled: true
     channel: "rubocop-0-79"
+  duplication:
+    enabled: false
 
 exclude_patterns:
 - "config/"
