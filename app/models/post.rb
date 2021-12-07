@@ -20,4 +20,8 @@ class Post < ApplicationRecord
   def say_hello
     puts 'hello'
   end
+
+  def say_goodbye
+    puts 'bye'
+  end
 end
