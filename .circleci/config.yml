@@ -8,7 +8,7 @@ jobs:
       - image: cimg/ruby:2.7.1-node
         environment:
           RAILS_ENV: test
-          CC_TEST_REPORTER_ID: e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9
+          CC_TEST_REPORTER_ID: 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777
           PGHOST: 127.0.0.1
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/react_rails_start_test
       - image: circleci/postgres:9.5-alpine
@@ -24,7 +24,7 @@ jobs:
       - run: bundle install --jobs 4
       - run:
           environment:
-            CC_TEST_REPORTER_ID: e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9
+            CC_TEST_REPORTER_ID: 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777
           command: ./cc-test-reporter before-build
       - run: bundle exec rspec --color --require spec_helper spec --format progress
       - run:
@@ -33,4 +33,4 @@ jobs:
             ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.json"
       - run:
           name: Code Climate Upload Coverage
-          command: ./cc-test-reporter upload-coverage --id e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9 --debug -e https://0847-181-166-180-33.ngrok.io/v1/test_reports
+          command: ./cc-test-reporter upload-coverage --id 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777 --debug -e https://0847-181-166-180-33.ngrok.io/v1/test_reports
