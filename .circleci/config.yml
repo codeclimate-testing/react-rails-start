@@ -4,8 +4,6 @@ orbs:
 
 jobs:
   build:
-    environment:
-      CC_TEST_REPORTER_ID: e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9
     docker:
       - image: cimg/ruby:2.7.1-node
         environment:
@@ -30,18 +28,6 @@ jobs:
           command: ./cc-test-reporter before-build
       - run: bundle exec rspec --color --require spec_helper spec --format progress
       - run:
-          name: Code Climate Test Coverage
-          command: |
-            ./cc-test-reporter format-coverage -t simplecov -o "./coverage/.resultset.json"
-      - persist_to_workspace:
-          root: coverage
-          paths:
-            - .resultset.json
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-artifacts
-      - run:
           environment:
             CC_TEST_REPORTER_ID: e4328e70b15edf8046849a2738d5dccf704c547f5e8c4de6249c6c73657b82f9
-          command: ./cc-test-reporter after-build || echo "skip upload"
+          command: ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
