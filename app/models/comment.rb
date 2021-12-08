@@ -9,6 +9,10 @@ class Comment < ApplicationRecord
   alias_attribute :author_id, :user_id
   alias_attribute :user, :author
 
+  def asdasd
+    puts 'fsdjisdjfidsjf'
+  end
+
   def scream
     'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
     'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
