@@ -16,4 +16,8 @@ class Post < ApplicationRecord
   def do_a_flip
     puts 'flipped!'
   end
+
+  def hola
+    puts 'hola'
+  end
 end
