@@ -9,10 +9,48 @@ class Comment < ApplicationRecord
   alias_attribute :author_id, :user_id
   alias_attribute :user, :author
 
-  def asdasd
+  def set_asdasd
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    puts 'fsdjisdjfidsjf'
+    if true
+      if false
+        if true
+          if true
+            if false
+              if true
+                if true
+                  if false
+                    if true
+                      if true
+                        if false
+                          if true
+                            return
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    puts 'fsdjisdjfidsjf'
     puts 'fsdjisdjfidsjf'
   end
-
+  
   def scream
     'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
     'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
