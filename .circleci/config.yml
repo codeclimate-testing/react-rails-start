@@ -33,4 +33,4 @@ jobs:
             ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.json"
       - run:
           name: Code Climate Upload Coverage
-          command: ./cc-test-reporter upload-coverage --id 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777 --debug -e https://5ee4-181-166-180-33.ngrok.io/v1/test_reports
+          command: ./cc-test-reporter upload-coverage --id 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777 --debug -e https://956d-181-166-180-33.ngrok.io/v1/test_reports
