@@ -30,6 +30,6 @@ class Post < ApplicationRecord
   end
 
   def asdasdasdasd
-    '29821941891829019241'
+    '2982194189019241'
   end
 end
