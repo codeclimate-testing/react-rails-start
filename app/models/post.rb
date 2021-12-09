@@ -17,7 +17,7 @@ class Post < ApplicationRecord
     puts 'flipped!!!!!'
   end
 
-  def say_hello
+  def say_hello(name, last_name, phone, address, family, head, shoulders, knees, toes)
     puts 'hello'
   end
 
