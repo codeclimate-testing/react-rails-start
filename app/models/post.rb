@@ -28,8 +28,4 @@ class Post < ApplicationRecord
   def say_goodbye
     puts 'bye'
   end
-
-  def asdasdasdasd
-    '2982194189019241'
-  end
 end
