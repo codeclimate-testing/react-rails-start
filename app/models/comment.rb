@@ -10,6 +10,6 @@ class Comment < ApplicationRecord
   alias_attribute :user, :author
 
   def hola
-    'hola'
+    'holaa'
   end
 end
