@@ -26,6 +26,6 @@ class Post < ApplicationRecord
   end
 
   def say_goodbye
-    puts 'bye'
+    puts 'byeee'
   end
 end
