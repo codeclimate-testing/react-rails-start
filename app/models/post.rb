@@ -28,4 +28,8 @@ class Post < ApplicationRecord
   def say_goodbye
     puts 'byeee'
   end
+
+  def scream
+    'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+  end
 end
