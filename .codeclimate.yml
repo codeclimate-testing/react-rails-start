@@ -43,12 +43,8 @@ checks:
       threshold: #language-specific defaults. overrides affect all languages.
 
 plugins:
-  eslint:
-    enabled: true
-    channel: "eslint-7"
-  rubocop:
-    enabled: true
-    channel: "rubocop-0-79"
+  duplication:
+    enabled: false
 
 exclude_patterns:
 - "config/"
@@ -64,3 +60,4 @@ exclude_patterns:
 - "**/vendor/"
 - "**/*_test.go"
 - "**/*.d.ts"
+- "diff/"

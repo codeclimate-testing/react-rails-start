@@ -8,9 +8,9 @@ jobs:
       - image: cimg/ruby:2.7.1-node
         environment:
           RAILS_ENV: test
-          CC_TEST_REPORTER_ID: e698bbf80bf3c4d5cbc9689b595376ac4ba846dee43cb39aefc1ae03561815dc
+          CC_TEST_REPORTER_ID: 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777
           PGHOST: 127.0.0.1
-          DATABASE_URL: postgres://postgres@127.0.0.1:5432/wbooks-api_test
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/react_rails_start_test
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: postgres
@@ -19,29 +19,18 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
+      - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: chmod +x ./cc-test-reporter
+      - run: bundle install --jobs 4
       - run:
-          name: Configure Bundler
+          environment:
+            CC_TEST_REPORTER_ID: 32f313c116e8ddd37dd1df71573c3e0b22795ee6d64eed696ed90bc7f0d86777
+          command: ./cc-test-reporter before-build
+      - run: bundle exec rspec --color --require spec_helper spec --format progress
+      - run:
+          name: Code Climate Format Coverage
           command: |
-            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-            source $BASH_ENV
-            gem install bundler
+            ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.json"
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
-      - run:
-          name: Wait for DB
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load --trace
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
-          name: Run tests
-          command: |
-            ./cc-test-reporter before-build
-            bundle exec rspec spec -fd
-            ./cc-test-reporter after-build
+          name: Code Climate Upload Coverage
+          command: ./cc-test-reporter upload-coverage --id 54505c1a1f7d928c1314bce5a481c8d0d88cad93d1a6b777c0ebe36b941e3eea --debug
