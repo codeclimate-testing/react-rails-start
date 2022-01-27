@@ -42,10 +42,10 @@
     "semver" "^6.3.0"
     "source-map" "^0.5.0"
 
-"@babel/eslint-parser@^7.14.9":
-  "integrity" "sha512-W3En2CT6iOZJ+jEujLlwL2h/Jraj6S/IHrh63nV+TfX83DYe9pI4pcu0Luj6/hJ2kIr/3hOttxzaEsSQnUKx+w=="
-  "resolved" "https://registry.npmjs.org/@babel/eslint-parser/-/eslint-parser-7.14.9.tgz"
-  "version" "7.14.9"
+"@babel/eslint-parser@^7.16.5":
+  "integrity" "sha512-mUqYa46lgWqHKQ33Q6LNCGp/wPR3eqOYTUixHFsfrSQqRxH0+WOzca75iEjFr5RDGH1dDz622LaHhLOzOuQRUA=="
+  "resolved" "https://registry.npmjs.org/@babel/eslint-parser/-/eslint-parser-7.16.5.tgz"
+  "version" "7.16.5"
   dependencies:
     "eslint-scope" "^5.1.1"
     "eslint-visitor-keys" "^2.1.0"
@@ -3192,7 +3192,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz"
   "version" "2.1.0"
 
-"eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0", "eslint@^3 || ^4 || ^5 || ^6 || ^7", "eslint@^7.0.0", "eslint@^7.12.1", "eslint@^7.32.0", "eslint@>= 4.12.1", "eslint@>=4.19.1", "eslint@>=5.16.0", "eslint@>=7.5.0":
+"eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0", "eslint@^3 || ^4 || ^5 || ^6 || ^7", "eslint@^7.0.0", "eslint@^7.12.1", "eslint@^7.32.0", "eslint@^7.5.0 || ^8.0.0", "eslint@>= 4.12.1", "eslint@>=4.19.1", "eslint@>=5.16.0":
   "integrity" "sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-7.32.0.tgz"
   "version" "7.32.0"
