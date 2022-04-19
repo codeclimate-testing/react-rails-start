@@ -39,7 +39,7 @@ module Api
     private
 
     def incorrect_user_error
-      { json: { errors: 'Usuario incorrecto' }, status: :unauthorized }
+      { json: { errors: 'Usuario muy incorrecto' }, status: :unauthorized }
     end
 
     def comment_errors
