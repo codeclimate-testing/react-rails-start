@@ -43,11 +43,15 @@ checks:
       threshold: #language-specific defaults. overrides affect all languages.
 
 plugins:
+  structure:
+    enabled: false
+  duplication:
+    enabled: false
   eslint:
     enabled: true
-    channel: "eslint-7"
+    channel: "eslint-8"
   rubocop:
-    enabled: true
+    enabled: false
     channel: "rubocop-0-79"
 
 exclude_patterns:
