@@ -7,7 +7,9 @@ plugins:
     enabled: false
   eslint:
     enabled: true
-    channel: eslint-7
+    channel: eslint-8
+  rubocop:
+    enabled: false
 
 exclude_patterns:
 - "config/"
