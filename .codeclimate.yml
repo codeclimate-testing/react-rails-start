@@ -47,9 +47,12 @@ plugins:
     enabled: false
   duplication:
     enabled: false
-  eslint:
+  eslint-8-test:
     enabled: true
-    channel: "eslint-8"
+    config:
+      extensions:
+        - .js
+        - .vue
   rubocop:
     enabled: false
     channel: "rubocop-0-79"

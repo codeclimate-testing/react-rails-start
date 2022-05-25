@@ -20,7 +20,7 @@ module.exports = {
     VISTA_ONLINE_LEARNING: true,
   },
   rules: {
-    'max-len': ['error', 100],
+    'max-len': [1, 100],
     'object-curly-spacing': ['error', 'always', { 'objectsInObjects': false }],
     'comma-dangle': [
       'error',
@@ -80,7 +80,7 @@ module.exports = {
           'warn',
           {
             'singleline': 3,
-            'multiline': { 'max': 1, 'allowFirstLine': false },
+            'multiline': 1,
           },
         ],
         'indent': 'off',
