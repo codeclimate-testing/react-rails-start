@@ -8,8 +8,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    'eslint:recommended',
-    'google',
+    'eslint:recommended'
   ],
   globals: {
     CKEDITOR: true,
