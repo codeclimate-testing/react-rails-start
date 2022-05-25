@@ -47,8 +47,9 @@ plugins:
     enabled: false
   duplication:
     enabled: false
-  eslint-8-test:
+  eslint:
     enabled: true
+    channel: eslint-8
     config:
       extensions:
         - .js
