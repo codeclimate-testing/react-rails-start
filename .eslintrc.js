@@ -8,7 +8,8 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    'eslint:recommended'
+    'eslint:recommended',
+    'google'
   ],
   globals: {
     CKEDITOR: true,
@@ -19,6 +20,7 @@ module.exports = {
     VISTA_ONLINE_LEARNING: true,
   },
   rules: {
+    'max-len': ['error', 100],
     'object-curly-spacing': ['error', 'always', { 'objectsInObjects': false }],
     'comma-dangle': [
       'error',

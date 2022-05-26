@@ -59,6 +59,7 @@ plugins:
     channel: "rubocop-0-79"
 
 exclude_patterns:
+- "app/javascript/components/"
 - "config/"
 - "db/"
 - "dist/"
