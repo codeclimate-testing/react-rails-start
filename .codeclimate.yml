@@ -51,6 +51,7 @@ plugins:
     enabled: true
     channel: eslint-8
     config:
+      debug: true
       extensions:
         - .js
         - .vue
