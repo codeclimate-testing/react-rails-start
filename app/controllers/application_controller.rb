@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_csrf_cookie
+    puts "aaa test"
     cookies['X-CSRF-Token'] = form_authenticity_token
   end
 end
