@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
     
     puts "AAA"
     
+    puts "other test"
+    
+    
     
     
   end
