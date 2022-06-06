@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     puts "Even more"
     
     
-    
+    puts "other test"
     
   end
 end
