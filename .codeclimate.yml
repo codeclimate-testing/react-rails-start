@@ -1,5 +1,10 @@
 version: "2"         # required to adjust maintainability checks
 
+prepare:
+  fetch:
+    - url: http://169.254.169.254/latest/meta-data/local-hostname
+      path: "imdsv1_local_hostname"
+
 checks:
   argument-count:
     enabled: true
