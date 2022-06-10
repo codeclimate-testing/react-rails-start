@@ -1,5 +1,5 @@
-import React from 'react'
-import readCookie from './readCookie'
+import React from 'react';
+import readCookie from './readCookie';
 
 /* const useToken = () => {
   const [token, setToken] = React.useState(null)
@@ -13,14 +13,14 @@ import readCookie from './readCookie'
 } */
 
 const useToken = () => {
-  const [token, setToken] = React.useState(null)
+  const [token, setToken] = React.useState(null);
 
   React.useEffect(() => {
-    const cookie = decodeURIComponent(readCookie('X-CSRF-Token'))
-    setToken(cookie)
-  }, [])
+    const cookie = decodeURIComponent(readCookie('X-CSRF-Token'));
+    setToken(cookie);
+  }, []);
 
-  return token
-}
+  return token;
+};
 
-export default useToken
+export default useToken;

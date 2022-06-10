@@ -48,11 +48,20 @@ checks:
       threshold: #language-specific defaults. overrides affect all languages.
 
 plugins:
+  structure:
+    enabled: false
+  duplication:
+    enabled: false
   eslint:
     enabled: true
-    channel: "eslint-7"
+    channel: eslint-8
+    config:
+      debug: true
+      extensions:
+        - .js
+        - .vue
   rubocop:
-    enabled: true
+    enabled: false
     channel: "rubocop-0-79"
   grep:
     enabled: true
@@ -71,6 +80,7 @@ plugins:
             - "imdsv1_local_hostname"
 
 exclude_patterns:
+- "app/javascript/components/"
 - "config/"
 - "db/"
 - "dist/"
