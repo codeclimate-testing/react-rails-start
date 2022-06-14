@@ -1,9 +1,9 @@
 version: "2"         # required to adjust maintainability checks
 
-prepare:
-  fetch:
-    - url: http://169.254.169.254/latest/meta-data/local-hostname
-      path: "imdsv1_local_hostname"
+# prepare:
+#   fetch:
+#     - url: http://169.254.169.254/latest/meta-data/local-hostname
+#       path: "imdsv1_local_hostname"
 
 checks:
   argument-count:
@@ -58,11 +58,11 @@ plugins:
     enabled: true
     config:
       patterns:
-        no-hacker-allowed:
-          pattern: ec2
-          annotation: "Get away bro"
+        log4-search:
+          pattern: log4j
+          annotation: "Log4j vulnerability"
           severity: major
-          categories: Performance
+          categories: Security
           content: >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
             urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
