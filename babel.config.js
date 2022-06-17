@@ -37,6 +37,7 @@ module.exports = function(api) {
       ]
     ].filter(Boolean),
     plugins: [
+      '@babel/babel-plugin-macros',
       '@babel/plugin-proposal-optional-chaining',
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-transform-destructuring',
