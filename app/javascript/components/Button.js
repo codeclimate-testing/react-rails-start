@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const Button = (props, foobar) => {
+  globalisim = 2;
   const {
     type,
     style,
