@@ -17,23 +17,14 @@ module.exports = function(api) {
 
   return {
     presets: [
-      isTestEnv && [
-        '@babel/preset-env',
-        {
-          targets: {
-            node: 'current'
-          },
-          modules: 'commonjs'
-        },
-        '@babel/preset-react'
-      ],
-      (isProductionEnv || isDevelopmentEnv) && [
+      [
         '@babel/preset-env',
         {
           forceAllTransforms: true,
           useBuiltIns: 'entry',
           corejs: 3,
           modules: false,
+          loose: false,
           exclude: ['transform-typeof-symbol']
         }
       ],
@@ -50,6 +41,8 @@ module.exports = function(api) {
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
+      ['@babel/plugin-proposal-private-methods', { loose: true }],
+      ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
       [
         '@babel/plugin-proposal-class-properties',
         {
@@ -74,12 +67,6 @@ module.exports = function(api) {
         '@babel/plugin-transform-regenerator',
         {
           async: false
-        }
-      ],
-      isProductionEnv && [
-        'babel-plugin-transform-react-remove-prop-types',
-        {
-          removeImport: true
         }
       ]
     ].filter(Boolean)

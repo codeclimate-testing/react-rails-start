@@ -48,27 +48,13 @@ checks:
       threshold: #language-specific defaults. overrides affect all languages.
 
 plugins:
+  duplication:
+    enabled: false
+  structure:
+    enabled: false
   eslint:
     enabled: true
     channel: "eslint-7"
-  rubocop:
-    enabled: true
-    channel: "rubocop-0-79"
-  grep:
-    enabled: true
-    config:
-      patterns:
-        log4-search:
-          pattern: log4j
-          annotation: "Log4j vulnerability"
-          severity: major
-          categories: Security
-          content: >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
-            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
-            tincidunt, diam eros tempor neque
-          path_patterns:
-            - "imdsv1_local_hostname"
 
 exclude_patterns:
 - "config/"
