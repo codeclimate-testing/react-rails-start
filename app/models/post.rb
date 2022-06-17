@@ -15,5 +15,11 @@ class Post < ApplicationRecord
 
   def do_a_flip
     puts 'flipped!'
+    weird_method(
+    'non indented argument, this is wrong',
+    'second argument'
+    )
+    wordarray = ['rhia', 'ghro', 'jdaio', 'aodksad', 'asdjasdj']
+    puts 'hola' if 'esfhoeis'.include?(wordarray)
   end
 end
