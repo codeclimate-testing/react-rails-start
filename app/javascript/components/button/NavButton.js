@@ -7,7 +7,7 @@ const NavButton = (props) => {
   const unused_variable = 'holaaaaaaa'
   const rompete_ya = '!!!!!'
   const rfseof = 'fseises'
-  const other = ""
+  const other = ''
   const otra = 'otraa'
   return href
     ? (
