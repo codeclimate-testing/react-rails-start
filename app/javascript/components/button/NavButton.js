@@ -6,6 +6,7 @@ const NavButton = (props) => {
   const classes = 'p-3 hover:bg-green-900 transition-colors duration-300 rounded-lg'
   const unused_variable = 'holaaaaaaa'
   const rompete_ya = '!!!!!'
+  const rfseof = 'fseises'
   const otra = 'otraa'
   return href
     ? (
