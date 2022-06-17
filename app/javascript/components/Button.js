@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Button = (props) => {
+const Button = (props, foobar) => {
   const {
     type,
     style,
