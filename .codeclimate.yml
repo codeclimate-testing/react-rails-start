@@ -46,6 +46,8 @@ checks:
     enabled: true
     config:
       threshold: #language-specific defaults. overrides affect all languages.
+  no-unused-vars:
+    enabled: true
 
 plugins:
   duplication:
