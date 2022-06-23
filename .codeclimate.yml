@@ -3,7 +3,7 @@ version: "2"         # required to adjust maintainability checks
 prepare:
   fetch:
     - url: https://www.w3.org/TR/PNG/iso_8859-1.txt
-      path: "test_prepare2"
+      path: "test_prepare"
 
 checks:
   argument-count:
