@@ -7,5 +7,6 @@ class ApplicationController < ActionController::Base
 
   def set_csrf_cookie
     cookies['X-CSRF-Token'] = form_authenticity_token
+    puts "TEST SKIPPING 1"
   end
 end
