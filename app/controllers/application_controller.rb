@@ -293,4 +293,47 @@ class ApplicationController < ActionController::Base
       puts   "bla"
     end
   end
+  
+  def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    puts a
+  end
+  
+  def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    puts a
+  end
+    def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    puts a
+  end
+  
+    def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    puts a
+  end
+  
+  def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    if a
+      b
+    elsif b
+      g
+    elsif i
+      j
+    elsif h * g > 0
+      a
+    elsif 1 * b * 2 * a / 3 * 5 > 1
+      u / 2 + 3 * 5
+    end
+  end
+  
+  def other(a,b,c,d,e,f,g,h,i,j,k,l,u)
+    if a
+      b
+    elsif b
+      g
+    elsif i
+      j
+    elsif h * g > 0
+      a
+    elsif 1 * b * 2 * a / 3 * 5 > 1
+      u / 2 + 3 * 5
+    end
+  end
 end
