@@ -57,6 +57,8 @@ plugins:
   eslint:
     enabled: true
     channel: "eslint-7"
+  rubocop:
+    enabled: true
 
 exclude_patterns:
 - "config/"
