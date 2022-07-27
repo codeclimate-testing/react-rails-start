@@ -60,6 +60,8 @@ plugins:
   rubocop:
     enabled: true
     channel: rubocop-1-31-0
+    issue_override:
+      severity: critical
 
 exclude_patterns:
 - "config/"
