@@ -36,6 +36,323 @@ const Button = (props, letseegaston) => {
         {text || children}
       </div>}
     </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       v
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       v<div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>v
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>v<div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>v<div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>v
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>v<div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       v
+       v
+       v
+       v<div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       v
+       v
+       v
+       v
+       
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>
+       <div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div><div className="flex items-center">
+      {icon && <div className="rounded-full p-2">
+        {icon}
+      </div>}
+      {(text || children) &&
+      <div className={textClasses}>
+        {text || children}
+      </div>}
+    </div>asd  [[[}}}
+       
+       
+       
+       
   </button>
 
   if (href) return <a href={href}>{button}</a>
